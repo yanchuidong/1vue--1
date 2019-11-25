@@ -1,0 +1,8 @@
+{
+  "banner2": [
+      {"src":"./static/img/s1.png"},
+      {"src":"./static/img/s2.png"},
+      {"src":"./static/img/s3.png"},
+      {"src":"./static/img/s4.png"}
+  ]
+}

@@ -1,29 +1,40 @@
 <template>
   <div id="app">
-     <top></top>
-    <footers></footers>
-    <router-view/>
+  <Tab></Tab>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import  footers from "./base/公共底部组件/footers"
- /* import  top from "./base/top"*/
+import Tab from "./base/dxx/Tab";
 export default {
-  name: 'App',
+  name: "App",
   components:{
-    footers,top
+    Tab
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less" >
+*{
+  margin: 0;
+ padding: 0;
+ list-style: none;
+ text-decoration-line: none;
 }
+body{
+  background: #f5f5f5;
+  ul{
+    list-style:none;
+  }
+}
+a{
+  text-decoration: none;
+}
+.context{
+  width: 100%;
+
+
+}
+
 </style>

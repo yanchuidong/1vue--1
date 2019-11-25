@@ -1,0 +1,25 @@
+{
+    "hotlist": [
+
+      {  "bookImg":"./static/img/c4.jpg",
+        "bookName": "RWB 2019 「RWBF CHINA」短袖圆领TEE恤",
+        "bookPrice": 199,
+        "bookId":1
+    },
+    {  "bookImg":"./static/img/c1.jpg",
+        "bookName": "RWB Logo Cap 棒球帽",
+        "bookPrice": 169,
+        "bookId":2
+    },
+    {  "bookImg":"./static/img/c2.jpg",
+        "bookName": "RAUH-Welt Acoks 中长袜",
+        "bookPrice": 69,
+        "bookId":3
+    },
+    {  "bookImg":"./static/img/c3.jpg",
+        "bookName": "RWB 2019「FENDER」短袖圆领TEE恤",
+        "bookPrice":199,
+        "bookId":4
+    }
+      ]
+}

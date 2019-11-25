@@ -1,0 +1,12 @@
+{
+    "banner": [
+        {"src":"./static/img/1.jpg"},
+        {"src":"./static/img/2.jpg"},
+        {"src":"./static/img/3.jpg"}
+    ],
+    "bannerb":[
+      {"src":"./static/img/tou1.jpg"},
+      {"src":"./static/img/tou2.jpg"},
+      {"src":"./static/img/tou3.jpg"}
+    ]
+}
