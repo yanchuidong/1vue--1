@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <Tab></Tab>
+    <Tab></Tab>
     <router-view></router-view>
   </div>
 </template>
@@ -9,32 +9,29 @@
 import Tab from "./base/dxx/Tab";
 export default {
   name: "App",
-  components:{
+  components: {
     Tab
   }
 };
 </script>
 
 <style lang="less" >
-*{
+* {
   margin: 0;
- padding: 0;
- list-style: none;
- text-decoration-line: none;
+  padding: 0;
+  list-style: none;
+  text-decoration-line: none;
 }
-body{
+body {
   background: #f5f5f5;
-  ul{
-    list-style:none;
+  ul {
+    list-style: none;
   }
 }
-a{
+a {
   text-decoration: none;
 }
-.context{
+.context {
   width: 100%;
-
-
 }
-
 </style>

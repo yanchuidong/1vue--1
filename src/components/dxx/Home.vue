@@ -17,8 +17,7 @@
         <img src="../../../static/dxx/img/img22.png" alt class="img1" />
         <span>有一大波Ben友晒单啦~</span>
 
-          <img :src="src.touImg" v-for="(src,index) in src" :key="index" class="t"/>
-
+        <img :src="src.touImg" v-for="(src,index) in src" :key="index" class="t" />
       </div>
     </div>
     <div class="swi4">
@@ -179,13 +178,11 @@ export default {
       position: absolute;
       left: 30%;
     }
-    .t{
-float: right;
-    width: 7%;
-    margin-right: -5px;
-    border-radius: 200px;
-
-
+    .t {
+      float: right;
+      width: 7%;
+      margin-right: -5px;
+      border-radius: 200px;
     }
   }
 }

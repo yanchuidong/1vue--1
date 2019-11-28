@@ -6,7 +6,7 @@
     </Header>
 
     <div class="context">
-          <img :src="onelist.bookImg" class="swi1"/>
+      <img :src="onelist.bookImg" class="swi1" />
 
       <div class="divdatail">
         <div class="mp">
@@ -18,12 +18,12 @@
           <Swiper2 :swiperImgs="swiperImg2" class="swi2"></Swiper2>
         </div>
         <div class="page">
-            <img src="../../../static/dxx/img/s5.jpg" alt="" style="width:100%">
+          <img src="../../../static/dxx/img/s5.jpg" alt style="width:100%" />
         </div>
       </div>
     </div>
     <div class="shopcat">
-       <button class="btn" @click="addShop(onelist.bookId)">加入购物车</button>
+      <button class="btn" @click="addShop(onelist.bookId)">加入购物车</button>
       <router-link
         :to="{name:'shopcat'}"
         tag="button"
@@ -41,14 +41,13 @@
           <h6>购物车</h6>
         </i>
       </router-link>
-
     </div>
   </div>
 </template>
 <script>
 import Swiper from "../../base/dxx/Swiper";
 import Swiper2 from "../../base/dxx/Swiperb";
-import { getBanner, getHotList, getHotListb, getBanner2} from "../../api/dxx";
+import { getBanner, getHotList, getHotListb, getBanner2 } from "../../api/dxx";
 import Cookies from "js-cookie";
 export default {
   name: "Detail",
@@ -64,7 +63,7 @@ export default {
 
   components: {
     Swiper,
-    Swiper2,
+    Swiper2
   },
   created() {
     this.getn();
@@ -73,8 +72,8 @@ export default {
     this.getm();
   },
   methods: {
-    prev(){
-      this.$router.go(-1)
+    prev() {
+      this.$router.go(-1);
     },
     getn() {
       getBanner().then(res => {
@@ -111,11 +110,9 @@ export default {
           ary[pid] = 1;
         }
       } else {
-
         ary = { [pid]: 1 };
       }
       Cookies.set("shoplist", JSON.stringify(ary));
-
     }
   }
 };
@@ -126,7 +123,7 @@ export default {
   top: 0;
   z-index: -1;
 }
-.swi1{
+.swi1 {
   height: 20rem;
   width: 100%;
 }
@@ -193,7 +190,7 @@ header {
     height: 100%;
     line-height: 35px;
 
-     background: #dbe9f6;
+    background: #dbe9f6;
     border: 0;
     outline: none;
     color: #4891e0;
@@ -205,7 +202,7 @@ header {
     width: 35%;
     height: 100%;
     line-height: 35px;
-     background: #4891e0;
+    background: #4891e0;
     border: 0;
     outline: none;
     color: #fff;
@@ -215,15 +212,15 @@ header {
 .toying {
   position: absolute;
   top: 0%;
-  right:  0%;
+  right: 0%;
   width: 10px;
   height: 10px;
   line-height: 10px;
   border-radius: 50px;
   text-align: center;
   background: red;
-  font-size:6px;
-  color:white;
+  font-size: 6px;
+  color: white;
 }
 a {
   margin: 5px 0px 5px 20px;

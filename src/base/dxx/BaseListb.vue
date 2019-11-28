@@ -1,8 +1,8 @@
 <template>
-    <div class="baselist">
+  <div class="baselist">
      <ul>
             <router-link tag="li" v-for="(items,index) in list" :key="index"
-            :to='{name:"detail",params:{pid:items.bookId}}'>
+            :to='{name:"detail",params:{pid:items.bookId}}' class="bac">
                   <img :src="items.bookImg" :alt="items.bookImg">
                   <div>
                      <p>{{items.bookName}}</p>
@@ -11,13 +11,13 @@
                   </div>
               </router-link>
         </ul>
-    </div>
+  </div>
 </template>
 <script>
 export default {
-    name:'BaseListb',
-    props:["list"]
-}
+  name: "BaseListb",
+  props: ["list"]
+};
 </script>
 <style lang="less" scoped>
 @border-botm2: 1px solid #f5f5f5;
@@ -31,27 +31,28 @@ export default {
     line-height: 20px;
     border-bottom: @border-botm2;
   }
-  a{
+  a {
     float: right;
     color: red;
   }
+  .bac {
+    background: #fff;
+  }
   ul {
-
     display: flex;
     flex-wrap: wrap;
     li {
-
+      margin: 0.1rem 0.2rem;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      border-bottom: @border-botm2;
-      width: 50%;
-
+      border-bottom: 1px solid #f5f5f5;
+      width: 48%;
       p {
-         margin-left: 10%;
+        margin-left: 10%;
         box-sizing: border-box;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-
         width: 80%;
         padding: 5px;
         color: #232326;
@@ -66,8 +67,8 @@ export default {
       }
       img {
         margin: 10%;
+        margin-bottom: 0;
         width: 80%;
-        cursor: pointer;
       }
     }
   }

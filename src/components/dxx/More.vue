@@ -6,6 +6,7 @@
     <div class="top">
       <img src="../../../static/dxx/img/t3.jpg" alt />
     </div>
+
     <div class="list">
       <BaseListb :list="list"></BaseListb>
     </div>
