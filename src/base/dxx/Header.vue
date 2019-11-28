@@ -1,7 +1,7 @@
 <template>
     <div class="header">
-        <i v-if="flag" class="iconfont icon-fanhui i1" @click="back"></i>
-        <slot>默认</slot>
+       <span class="sp1">CARBEN</span>
+      <span>STORE</span>
     </div>
 </template>
 <script>
@@ -22,16 +22,16 @@ export default {
 </script>
 <style lang="less" scoped>
 .header{
+  width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     height: 44px;
     line-height: 44px;
     text-align: center;
     background:white;
     color: black;
-     z-index: 2;
+     z-index: 999;
     i{
         float: left;
         position: relative;
@@ -39,5 +39,8 @@ export default {
         font-size: 20px;
 
     }
+}
+.sp1 {
+  font-weight: bold;
 }
 </style>

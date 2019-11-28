@@ -19,6 +19,3 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount("#app")
-/*
- 使用 import引入组件，再在vue实例中注册这个组件
-*/

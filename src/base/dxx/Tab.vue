@@ -9,9 +9,6 @@
         <router-link to="/mine">
             <i class="iconfont  icon-tubiao-"></i>
         </router-link>
-        <!-- <router-link to="/shopcat">
-
-        </router-link> -->
     </div>
 </template>
 <script>
@@ -20,6 +17,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+*{
+  margin: 0;
+  padding: 0;
+}
  .footer{
      position: fixed;
      left: 0;
@@ -28,9 +29,6 @@ export default {
      height: 50px;
      display: flex;
      background: #fff;
-    //  flex-direction: column;
-    //  justify-content:center;//垂直居中
-    //  align-items: center;//横向居中
      a{
        display: flex;
        flex: 1;

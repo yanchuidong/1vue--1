@@ -14,55 +14,56 @@
       </div>
 
       <div class="sd">
-        <img src="../../../static/img/img22.png" alt="" class="img1">
+        <img src="../../../static/dxx/img/img22.png" alt class="img1" />
         <span>有一大波Ben友晒单啦~</span>
+
+          <img :src="src.touImg" v-for="(src,index) in src" :key="index" class="t"/>
+
       </div>
+    </div>
+    <div class="swi4">
+      <Swiper4 :swiperImgs="swiperImg4" class="swi4_a"></Swiper4>
     </div>
     <div class="list">
       <h3>
         DPLS
-        <a>
+        <router-link to="/More">
           <h6>查看更多</h6>
-        </a>
+        </router-link>
       </h3>
       <BaseList :list="list"></BaseList>
     </div>
-    <!-- <div class="hotlist">
-      <h3>DPLS<a><h6>查看更多</h6></a></h3>
-
-      <ul>
-        <li v-for="(item,index) of bookHotList" :key="index">
-          <img :src="item.bookImg" :alt="item.bookImg" />
-          <p>{{item.bookName}}</p>
-          <p class="price">{{item.bookPrice |mytofixed | price}}</p>
-        </li>
-      </ul>
-    </div>-->
   </div>
 </template>
 <script>
 import Header from "../../base/dxx/Header";
 import Swiper from "../../base/dxx/Swiper";
+import Swiper4 from "../../base/dxx/Swiperd";
 import BaseList from "../../base/dxx/BaseList";
-import { getBanner, getHotList } from "../../api";
+import { getBanner, getBanner4, getHotList } from "../../api/dxx";
 import Cookies from "js-cookie";
 export default {
   name: "Home",
   data() {
     return {
       swiperImg: [],
-      list: []
+      swiperImg4: [],
+      list: [],
+      src: []
     };
   },
 
   components: {
     Header,
     Swiper,
+    Swiper4,
     BaseList
   },
   created() {
     this.getn();
     this.geth();
+    this.gety();
+    this.gets();
   },
   methods: {
     getn() {
@@ -74,17 +75,24 @@ export default {
       getHotList().then(res => {
         this.list = res.hotlist;
       });
-    }
+    },
+    gets() {
+      getHotList().then(res => {
+        this.src = res.tou;
+      });
+    },
+    gety() {
+      getBanner4().then(res => {
+        this.swiperImg4 = res.bannerc;
+      });
     }
   }
+};
 </script>
 <style lang="less" scoped>
 .c {
+  width: 100%;
   margin-bottom: 64px;
-  header {
-    position: fixed;
-    top: 0;
-  }
 }
 .sp1 {
   font-weight: bold;
@@ -151,6 +159,7 @@ export default {
     }
   }
 }
+
 .context {
   background: white;
   margin-top: 44px;
@@ -158,18 +167,31 @@ export default {
   Swiper {
     border-radius: 10px;
   }
-  .sd{
+  .sd {
+    line-height: 1.5rem;
     padding: 20px;
     margin: 10px;
-  width: 100%;
-  height: 20%;
-  .img1{
-    width: 15%;
-  }
-  span{
-    font-size: .8rem;
-    // text-align: center;
+    .img1 {
+      width: 15%;
+    }
+    span {
+      font-size: 0.8rem;
+      position: absolute;
+      left: 30%;
+    }
+    .t{
+float: right;
+    width: 7%;
+    margin-right: -5px;
+    border-radius: 200px;
+
+
+    }
   }
 }
+.swi4 {
+  .swi4_a {
+    height: 80%;
+  }
 }
 </style>

@@ -21,5 +21,10 @@
         "bookPrice":199,
         "bookId":4
     }
+      ],
+      "tou":[
+        {"touImg":"./static/img/tou1.jpg"},
+        {"touImg":"./static/img/tou2.jpg"},
+        {"touImg":"./static/img/tou3.jpg"}
       ]
 }

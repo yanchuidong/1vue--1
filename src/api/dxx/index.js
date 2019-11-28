@@ -1,5 +1,5 @@
 import axios from 'axios';
-axios.defaults.baseURL="/static/mock/";
+axios.defaults.baseURL="/static/dxx/mock";
 
 axios.interceptors.request.use((config)=>{
     return config;
@@ -17,9 +17,12 @@ export let  getBanner2=()=>{
 export let  getBanner3=()=>{
   return axios.get('hotlist.json');
 }
+export let  getBanner4=()=>{
+  return axios.get('banner.json');
+}
 export let  getHotList=()=>{
     return axios.get('hotlist.json');
 }
-export let  getHotList2=()=>{
+export let  getHotListb=()=>{
   return axios.get('hotlist2.json');
 }

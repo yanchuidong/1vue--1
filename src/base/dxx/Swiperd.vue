@@ -9,12 +9,12 @@
 
 <script>
 export default {
-  name: "Swiper2",
+  name: "Swiper4",
   props: ["swiperImgs"],
   data() {
     return {
       swiperOption: {
-        loop: true,
+        loop: false,
         speed: 500,
         slidesPerView: 1.8
       }

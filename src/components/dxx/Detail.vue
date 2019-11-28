@@ -4,9 +4,10 @@
       <i @click="prev()" class="iconfont icon-fanhui i1"></i>
       <i class="iconfont icon-fenxiang i2"></i>
     </Header>
+
     <div class="context">
-      <Swiper3 :swiperImgs="swiperImg3" class="swi1"></Swiper3>
-<!-- <img :src="item.bookImg" /> -->
+          <img :src="onelist.bookImg" class="swi1"/>
+
       <div class="divdatail">
         <div class="mp">
           <p class="pname">{{onelist.bookName}}</p>
@@ -17,7 +18,7 @@
           <Swiper2 :swiperImgs="swiperImg2" class="swi2"></Swiper2>
         </div>
         <div class="page">
-            <img src="../../../static/img/s5.jpg" alt="" style="width:100%">
+            <img src="../../../static/dxx/img/s5.jpg" alt="" style="width:100%">
         </div>
       </div>
     </div>
@@ -47,8 +48,7 @@
 <script>
 import Swiper from "../../base/dxx/Swiper";
 import Swiper2 from "../../base/dxx/Swiperb";
-import Swiper3 from "../../base/dxx/Swiperc";
-import { getBanner, getHotList, getBanner2,getBanner3 } from "../../api";
+import { getBanner, getHotList, getHotListb, getBanner2} from "../../api/dxx";
 import Cookies from "js-cookie";
 export default {
   name: "Detail",
@@ -56,7 +56,6 @@ export default {
     return {
       swiperImg: [],
       swiperImg2: [],
-      swiperImg3: [],
       bookHotList: [],
       onelist: [],
       flag: false
@@ -66,13 +65,12 @@ export default {
   components: {
     Swiper,
     Swiper2,
-    Swiper3
   },
   created() {
     this.getn();
     this.getl();
     this.gets();
-    this.gett();
+    this.getm();
   },
   methods: {
     prev(){
@@ -88,14 +86,15 @@ export default {
         this.swiperImg2 = res.banner2;
       });
     },
-     gett() {
-      getBanner3().then(res => {
-        this.swiperImg3 = res.hotlist;
-      });
-    },
     getl() {
       getHotList().then(res => {
         this.bookHotList = res.hotlist;
+        this.onelist = this.bookHotList[this.$route.params.pid - 1];
+      });
+    },
+    getm() {
+      getHotListb().then(res => {
+        this.bookHotList = res.hotlist2;
         this.onelist = this.bookHotList[this.$route.params.pid - 1];
       });
     },
@@ -115,7 +114,6 @@ export default {
 
         ary = { [pid]: 1 };
       }
-      console.log(ary);
       Cookies.set("shoplist", JSON.stringify(ary));
 
     }
@@ -130,8 +128,10 @@ export default {
 }
 .swi1{
   height: 20rem;
+  width: 100%;
 }
 .swi {
+  width: 100%;
   background: white;
   .swi2 {
     height: 80%;

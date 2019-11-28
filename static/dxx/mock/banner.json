@@ -8,5 +8,10 @@
       {"src":"./static/img/tou1.jpg"},
       {"src":"./static/img/tou2.jpg"},
       {"src":"./static/img/tou3.jpg"}
+    ],
+    "bannerc":[
+      {"src":"./static/img/j1.png"},
+      {"src":"./static/img/j2.png"},
+      {"src":"./static/img/j3.png"}
     ]
 }

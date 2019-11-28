@@ -1,15 +1,23 @@
 <template>
-  <div class="success">
-    <p>支付成功</p>
-    <button @click="golist" class="btn">点击继续购物</button>
+  <div>
+    <Header></Header>
+    <div class="success">
+      <span>支付成功</span>
+      <button @click="golist" class="btn">( 返回 )</button>
+    </div>
   </div>
 </template>
 <script>
+import Header from "./Header";
 import Cookies from "js-cookie";
 export default {
   name: "Success",
   created() {
     Cookies.remove("shoplist");
+  },
+
+  components: {
+    Header
   },
   methods: {
     golist() {
@@ -20,20 +28,28 @@ export default {
 </script>
 <style lang="less" scoped>
 .success {
-  width: 90%;
-  background: #fff;
-  margin: 20px auto;
-  padding: 20px;
+  opacity: 0.5;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15%;
+  margin-left: -150px;
+  padding: 43px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 5px;
   text-align: center;
-  p{
-      color: aqua;
-      font-size: 30px;
+  span {
+    color: red;
+    font-size: 20px;
   }
-  .btn{
-     color: #999;
-     font-size: 18px;
+  .btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 14px;
   }
 }
 </style>
