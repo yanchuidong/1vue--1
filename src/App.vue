@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     <top></top>
+
     <footers></footers>
     <router-view/>
   </div>
@@ -8,12 +8,16 @@
 
 <script>
   import  footers from "./base/公共底部组件/footers"
- /* import  top from "./base/top"*/
+  // import  top from "./base/top"
 export default {
   name: 'App',
+  /*data(){
+    list:[]
+  },*/
   components:{
-    footers,top
+    footers
   }
+
 }
 </script>
 

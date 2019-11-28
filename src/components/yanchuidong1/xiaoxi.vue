@@ -7,7 +7,7 @@
         <li ><i class="iconfont icon-fensi"></i>  粉丝</li>
         <li><i class="iconfont icon-dianzan"></i> 点赞</li>
         <li > <i class="iconfont icon-pinglun"></i>
-          <router-link :to="{name:'pinglunye',params:{id:100}}">pinglun </router-link>
+          <router-link :to="{name:'pinglunye',params:{id:100}}"></router-link>
           <span @click="topinglun">评论</span>
         </li>
         </ul>
